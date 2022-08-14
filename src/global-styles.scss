@@ -1,0 +1,68 @@
+@import 'variables';
+@import 'fonts';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: $background-grey;
+    color: $black;
+    font-family: SF;
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+#root {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.root-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.page-container {
+    width: $main-width;
+    margin: 0 auto;
+    flex: 1;
+}
+
+.border {
+    border: 1px solid $line-grey;
+}
+
+.bg-white {
+    background: white;
+}
+
+.sticky {
+    top: 0;
+    position: sticky;
+    z-index: 999999;
+}
+
+.footer {
+    padding: 32px 0;
+    background: white;
+    margin-top: 60px;
+}

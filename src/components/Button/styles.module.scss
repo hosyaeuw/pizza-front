@@ -1,0 +1,36 @@
+@import '../../variables';
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    padding: 0 24px;
+    background: $orange;
+    border: none;
+    outline: none;
+    user-select: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:not(:disabled):hover {
+        background: darken($orange, 10);
+    }
+
+    &:active {
+        background: darken($orange, 15);
+    }
+
+    &:disabled {
+        opacity: 0.5;
+    }
+}
+
+.button-text {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+}

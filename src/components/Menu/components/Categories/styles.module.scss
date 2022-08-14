@@ -1,0 +1,13 @@
+@import '../../../../variables';
+
+.categories {
+    width: 100%;
+
+    .categories__item+.categories__item {
+        margin-left: 32px;
+    }
+
+    &__item {
+        color: $black;
+    }
+}

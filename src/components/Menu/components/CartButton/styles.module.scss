@@ -1,0 +1,33 @@
+@import '../../../../variables';
+
+.cart-btn {
+    &-container {
+        position: relative;
+    }
+
+    &__new-product {
+        position: absolute;
+        background: #FFFFFF;
+        box-shadow: 0px 2px 4px rgba($black, 0.1);
+        border-radius: 58px;
+        top: calc(100% + 15px);
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 9999;
+        padding: 12px 32px;
+        white-space: nowrap;
+    }
+
+    &__ico {
+        stroke-width: 0;
+        height: 24px;
+        width: 24px;
+        margin-right: 8px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}

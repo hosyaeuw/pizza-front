@@ -1,0 +1,27 @@
+.catalog-grid {
+    &__category {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 32px;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 40px;
+        line-height: 48px;
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        margin-bottom: 30px;
+
+        &:not(:nth-child(4n)) {
+            margin-right: 30px;
+        }
+    }
+}

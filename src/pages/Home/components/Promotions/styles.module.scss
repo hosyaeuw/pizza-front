@@ -1,0 +1,18 @@
+@import '../../../../variables.scss';
+
+.promotion {
+    width: 300px;
+    height: 343px;
+    background: $orange;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &-container {
+        padding-bottom: 30px !important;
+        cursor: grab;
+    }
+
+    &:active {
+        cursor: grabbing;
+    }
+}

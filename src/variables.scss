@@ -1,0 +1,17 @@
+$orange: #FF7010;
+$black: #191919;
+$grey: #A5A5A5;
+$line-grey: #F0F0F0;
+$background-grey: #F9F9F9;
+$red: #E23535;
+$light-primary: #FFEEE2;
+$green: #24D17E;
+
+$main-width: 1290px;
+
+@mixin text-rows($count) {
+    display: -webkit-box;
+    -webkit-line-clamp: $count;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

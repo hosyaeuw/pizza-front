@@ -1,26 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { Footer, Header, Menu } from "./components";
+import { Cart, Home, Profile } from "./pages";
+
+// TODO: переделать корзину, чтобы при добавлении/удалении ингредиентов были разные сущности
+// TODO: в истории переделать пагинацию, чтобы пред страница была слева, если больше 2
+// TODO: фильтры через тэги
+// TODO: самовывоз
+
+const App = () => {
+    return (
+        <div className="root-container">
+            <div className="border bg-white">
+                <div className="page-container">
+                    <Header />
+                </div>
+            </div>
+            <div className="border bg-white sticky">
+                <div className="page-container">
+                    <Menu />
+                </div>
+            </div>
+            <div className="page-container">
+                <Routes>
+                    <Route index element={<Home />} />
+                    <Route path="/cart" element={<Cart />} />
+                    <Route path="/profile/*" element={<Profile />} />
+                </Routes>
+            </div>
+            <div className="footer">
+                <div className="page-container">
+                    <Footer />
+                </div>
+            </div>
+        </div>
+    );
+};
 
 export default App;

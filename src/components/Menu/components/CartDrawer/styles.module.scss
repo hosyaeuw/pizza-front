@@ -1,0 +1,47 @@
+@import '../../../../variables';
+
+.cart-drawer {
+    width: 100%;
+    height: 100%;
+    padding: 32px 20px 0;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+
+    &__items {
+        flex: 1;
+    }
+
+    &__item {
+        margin-bottom: 20px;
+    }
+
+    &__total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid $line-grey;
+        height: 72px;
+
+        &-price {
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 28px;
+            color: $orange;
+        }
+    }
+
+    &-empty {
+        display: flex;
+        height: 100%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+}

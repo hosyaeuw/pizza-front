@@ -1,0 +1,145 @@
+@import '../../../../../../variables';
+
+.catalog-modal-item {
+    width: 1070px;
+    height: 680px;
+    display: flex;
+    justify-content: space-between;
+
+    &__photo {
+        height: 450px;
+        width: 450px;
+
+        &-container {
+            width: 560px;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        @include text-rows(1);
+    }
+
+    &__content {
+        width: 480px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 32px 20px 20px;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__price {
+        font-size: 20px;
+        line-height: 28px;
+        color: $orange;
+        margin-right: 12px;
+    }
+
+    &__weight {
+        font-size: 14px;
+        line-height: 18px;
+        color: $grey;
+    }
+
+    &__btn {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+.ingredient {
+    width: 105px;
+    cursor: pointer;
+    user-select: none;
+
+    &.active {
+        .ingredient__img {
+            &-container {
+                border: 1px solid $orange;
+
+                &::after {
+                    content: '\2714';
+                }
+            }
+        }
+    }
+
+    &.disable {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+
+        .ingredient__img {
+            &-container {
+                &::after {
+                    content: '\2716';
+                }
+            }
+        }
+    }
+
+    &__img {
+        stroke: $orange;
+        width: 40px;
+        height: 40px;
+
+        &-container {
+            height: 105px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 8px;
+            border: 1px solid $line-grey;
+            border-radius: 12px;
+            position: relative;
+
+            &::after {
+                position: absolute;
+                top: 8px;
+                right: 8px;
+                height: 16px;
+                width: 16px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 12px;
+                color: $orange;
+                border: 1px solid $orange;
+            }
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__name,
+    &__price {
+        display: inline-block;
+        text-align: center;
+    }
+
+    &__name {
+        margin-bottom: 4px;
+        @include text-rows(2);
+    }
+
+    &__price {
+        color: $orange;
+        @include text-rows(1);
+    }
+}

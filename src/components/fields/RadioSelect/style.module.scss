@@ -1,0 +1,61 @@
+@import '../../../variables';
+
+.radio {
+    height: 48px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+
+    &.buttons {
+        border: 1px solid $line-grey;
+    }
+
+    &-button {
+        user-select: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 6px;
+        cursor: pointer;
+        height: 100%;
+
+        &.checked {
+            background: $orange;
+            color: white;
+        }
+    }
+
+    &-item {
+        position: relative;
+        cursor: pointer;
+        margin-left: 16px;
+
+        &::before {
+            $size: 16px;
+            content: '';
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: calc(100% + 8px);
+            height: $size;
+            width: $size;
+            border: 1px solid $orange;
+            border-radius: 100%;
+        }
+
+        &.checked {
+            &::after {
+                $size: 8px;
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: calc(100% + 13px);
+                height: $size;
+                width: $size;
+                background: $orange;
+                border-radius: 100%;
+            }
+        }
+    }
+}

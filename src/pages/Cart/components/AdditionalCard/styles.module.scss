@@ -1,0 +1,36 @@
+@import '../../../../variables';
+
+.additional-card {
+    $size: 190px;
+    width: $size;
+    height: 348px;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &__content {
+        padding: 16px;
+    }
+
+    &__photo {
+        width: $size;
+        height: $size;
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 12px;
+        text-align: center;
+        @include text-rows(2);
+    }
+
+    &__btn {
+        width: 100%;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}

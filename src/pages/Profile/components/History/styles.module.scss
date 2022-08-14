@@ -1,0 +1,54 @@
+@import '../../../../variables.scss';
+
+.history {
+    &__items {
+        min-height: 530px;
+        margin-bottom: 24px;
+    }
+
+    &__item {
+        margin-bottom: 20px;
+    }
+
+    &__pagination {
+        width: 352px;
+        margin: 0 auto;
+    }
+}
+
+.pagination {
+    display: flex;
+    justify-content: space-between;
+    user-select: none;
+
+    &__next,
+    &__prev {
+        svg {
+            stroke: white;
+        }
+    }
+
+    &__btn {
+        $size: 48px;
+        width: $size;
+        height: $size;
+        padding: 0;
+
+        &.current {
+            color: $orange;
+        }
+    }
+
+    &__page-btn {
+        background: white;
+        color: $black;
+        font-size: 16px;
+        line-height: 22px;
+        border: 1px solid $line-grey;
+        border-radius: 6px;
+
+        &:hover {
+            color: white;
+        }
+    }
+}

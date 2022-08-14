@@ -1,0 +1,53 @@
+@import '../../../../variables';
+
+.additional-list {
+    &__title {
+        margin-bottom: 20px;
+    }
+
+    &-container {
+        position: relative;
+
+        & .next,
+        & .prev {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            $size: 40px;
+            width: $size;
+            height: $size;
+            background: $orange;
+            border-radius: 100%;
+            z-index: 9999;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+
+            &:global(.swiper-button-disabled) {
+                opacity: 0.5;
+            }
+
+            &:hover {
+                background: darken($orange, 10)
+            }
+
+            &:active {
+                background: darken($orange, 15)
+            }
+
+            svg {
+                stroke: white;
+            }
+        }
+
+        & .next {
+            right: -70px;
+        }
+
+        & .prev {
+            left: -70px;
+        }
+    }
+}

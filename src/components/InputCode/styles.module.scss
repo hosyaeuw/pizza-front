@@ -1,0 +1,10 @@
+.input-code {
+    $size: 48px;
+    width: $size;
+    height: $size;
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+    }
+}
